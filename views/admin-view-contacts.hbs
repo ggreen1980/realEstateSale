@@ -1,0 +1,26 @@
+<div class="d-block w-100 pic mb-5">
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+
+{{#each contacts}}
+<div class="row">
+    <div class="col">
+        <h4 class="text-center mb-1">{{this.firstName}} {{this.lastName}}</h4>
+        <h6 class="text-center mb-1">{{this.email}}</h6>
+        <h6 class="text-center mb-1">{{this.phone}}</h6>
+        <h5 class="text-center mb-1">{{this.comments}}</h5>
+        <div class="text-center">
+            <a href="/admin-delete-contact/{{this.id}}"><button class="text-center btn btn-danger m-1">Delete Contact</button></a>
+        </div>
+    </div>
+</div> 
+{{/each}}
+
+{{#unless contacts}}
+<div class="row">
+    <div class="col">
+        <h4 class="text-center mb-1">There are currently no contacts in the database</h4>
+    </div>
+</div> 
+{{/unless}}
+    

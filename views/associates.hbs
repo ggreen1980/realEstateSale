@@ -1,0 +1,23 @@
+<img class="d-block w-100 pic mb-5" src="{{this.imagePathOne}}" alt="Second slide">
+           
+<h2 class="text-center features mb-5">Meet our Associates</h2>
+
+<div>
+    {{#each associates}}
+    <div class="row mb-5">
+        <div class="offset-2 col-3">
+            <img class="rounded-circle" src="{{this.imagePath}}" class="text-center mb-1">
+        </div>
+        <div class="col-3">
+            <h3 class="text-center mt-3 mb-1">{{this.name}}</h3>
+            <h5 class="text-center mb-1">{{this.position}}</h5>
+            <h6 class="text-center mb-1">{{this.lengthOfEmployment}} with A &amp; G Properties</h6>
+        </div>
+    </div>
+    {{/each}}
+    <div class="row">
+        <div class="col d-flex justify-content-end mr-4">
+            <a href="/associates"><img src="assets/arrow.jpeg"></a>
+        </div>
+    </div>
+</div>

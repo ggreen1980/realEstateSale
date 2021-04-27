@@ -1,0 +1,37 @@
+<div class="d-block w-100 pic mb-5">
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+
+<h2 class="text-center mb-5 features">Properties Currently Managed</h2>
+<div class="row justify-content-end">
+    <div class="col-4">
+        <a href="/add-property"><button class="text-center btn btn-success m-1">Add Property</button></a>
+    </div>
+</div>
+<table class="table table-border table-light table-striped w-50 mx-auto mt-3">
+    <thead>
+        <tr class="text-left">
+            <th class="text-center">Property</th>
+            <th class="text-center">location</th>
+            <th class="text-center">bedrooms</th>
+            <th class="text-center">baths</th>
+            <th class="text-center">Rent Amount</th>
+            <th class="text-center">Featured</th>
+            <th colspan="2"   class="text-center">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each properties}}
+        <tr>
+            <td><img class="d-block w-100" src="{{this.thumbnailImagePath}}" alt="managed property"></td>
+            <td class="text-center">{{this.location}}</td>
+            <td class="text-center">{{this.bedrooms}}</td>
+            <td class="text-center">{{this.baths}}</td>
+            <td class="text-center">${{this.rentAmt}}</td>
+            <td class="text-center">{{this.featured}}</td>
+            <td class="text-center"><a href="/admin-update-property/propertyId/{{this.id}}"><button class="text-center btn-sm btn-success">Update Property</button></a></td>
+            <td class="text-center"><a href="/admin-delete-property/propertyId/{{this.id}}"><button class="text-center btn-sm btn-danger">Delete Property</button></a></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

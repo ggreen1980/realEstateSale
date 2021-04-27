@@ -1,0 +1,127 @@
+.text-shadow {
+    text-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
+.pic {
+    width: 500px;
+    height: 400px;
+}
+
+a {
+   color: black;
+}
+
+.autoPopulate:hover {
+    font-size: 1.5em;
+    color: green;
+}
+
+#hover a:hover {
+    color: black !important;
+}
+
+li a:hover {
+    color: rgb(154, 1, 1) !important;
+}
+
+.sm-placeholder::placeholder {
+    font-size: .7rem;
+    color: black;
+}
+
+.rule {
+    width: 50%;
+    color: green;
+    margin: 15px auto;
+    border: 1px solid;
+}
+
+.features-txt {
+    color: rgb(154, 1, 1);
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 1px solid green;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.features {
+    border-bottom: 1px solid green;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+.footer-break {
+    border-top: 1px solid green;
+    width: 50%;
+    margin: 0 auto;
+}
+
+
+/*Logo*/
+
+header {
+    border-bottom: thin solid green;
+}
+
+.bottom-green {
+    border-bottom: thin solid green;
+}
+
+.logo {
+    font-family: "Savoye LET Plain";
+}
+
+.a-logo {
+    color:red;
+    font-weight: 500;
+    -webkit-text-stroke-color:  rgb(215, 2, 2);
+    -webkit-text-stroke-width: 1px;
+    position: relative;
+    z-index: 100;
+}
+
+.g-logo {
+    color: green;
+    margin-top: -75px;
+    margin-left: 60px;
+    font-weight: 500;
+    -webkit-text-stroke-color:  rgb(0, 96, 0);
+    -webkit-text-stroke-width: 1px;
+    position: relative;
+    z-index: 100;
+}
+
+#and {
+    margin-top: -75px;
+    margin-left: 45px;
+    line-height: 2em;
+    position: relative;
+    z-index: 150;
+    color: rgba(0, 0, 0, .75)
+}
+
+#properties-logo {
+    color: black;
+}
+
+.header-ul {
+    margin-top: 150px;
+}
+
+
+select {
+    font-size: .8rem !important;
+}
+
+
+.thumb {
+    height: 100px;
+}
+
+
+
+
+
+

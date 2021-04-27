@@ -1,0 +1,209 @@
+<div>
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+       
+<div class="features">
+    <h1 class="text-center mt-3 mb-1">Rent this home</h1><br>
+    <h3 class="text-center mb-1">{{this.location}}</h3>
+    <h5 class="text-center mb-1">{{this.bedrooms}} bedroom / {{this.baths}} bath</h5>
+     <h3 class="text-center mb-1">{{this.tag}}</h3>
+</div>
+
+
+<!-- RENTAL APPLICATION FORM -->
+<div class="bg bg-light rounded border m-5 p-3">
+    <form action='/rental-application/{{this.id}}' method="POST">
+
+
+         <!-- TLM: CLICK ON THIS <a> TAG TO AUTO POPULATE FORM -->
+         <a href="/populate-application-form/{{this.id}}"><h6 class="text-center autoPopulate" title="click here to auto populate form">Residential Lease Application</h6></a>
+            
+            
+            <label for="applicant-name" class="ml-4">Applicant Information</label>
+            <div class="form-row ml-3 mb-2">
+                <div class="col-2">
+                    <input type="text" name="firstName" class="form-control sm-placeholder" id="firstName" placeholder="First" value="Jane" autofocus>
+                </div>
+                <div class="col-1">
+                    <input type="text" name="initial" class="form-control sm-placeholder" id="initial" placeholder="M.I." value="A.">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="lastName" class="form-control sm-placeholder" id="lastName" placeholder="Last" value="Doe">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="dob" class="form-control sm-placeholder" id="dob" placeholder="D.O.B." value="1/1/1970">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="ssn" class="form-control sm-placeholder" id="ssn" placeholder="SSN" value="123-45-6789">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="driversLicense" class="form-control sm-placeholder" id="driversLicense" placeholder="Driver's License Number" value="123-45-6789">
+                </div>
+            </div>
+            <!-- END OF FIRST FORM ROW -->
+            <div class="form-row ml-3 mb-2">
+                <div class="col-2">
+                    <div class="row">
+                        <div class="ml-1 col">
+                            <select class="small custom-select" name="maritalStatus">
+                                <option class="small" selected value="unmarried">Unmarried</option>
+                                <option class="small" value="married">Married</option>
+                                <option class="small" value="separated">Separated</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <input type="text" name="spouseName" class="form-control sm-placeholder" id="spouseName" placeholder="Name of Spouse" value="Jon A. Doe">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="spouseDOB" class="form-control sm-placeholder" id="spouseDOB" placeholder="D.O.B." value="1-11-1960">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="spouseSSN" class="form-control sm-placeholder" id="spouseSSN" placeholder="SSN" value="123-45-6789">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="spouseDrivers" class="form-control sm-placeholder" id="spouseDrivers" placeholder="Driver's License Number" value="123-45-6789">
+                </div>
+            </div>
+            <!-- END OF SECOND FORM ROW -->
+            <div class="form-row ml-3 mb-3">
+                <div class="col-2">
+                    <input type="text" name="desiredMoveIn" class="form-control sm-placeholder" id="desiredMoveIn" placeholder="Desired Move-in Date" value="6-25-2020">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="occupantNumber" class="form-control sm-placeholder" id="occupantNumber" placeholder="# of Occupants" value="2">
+                </div>
+                <div class="offset-1 col-3">
+                    <input type="text" name="occupantOne" class="form-control sm-placeholder" id="occupantOne" placeholder="Name of Occupant">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="occupantTwo" class="form-control sm-placeholder" id="occupantTwo" placeholder="Name of Occupant">
+                </div>
+                <div class="offset-5 col-3 mt-1">
+                    <input type="text" name="occupantThree" class="form-control sm-placeholder" id="occupantThree" placeholder="Name of Occupant">
+                </div>
+                <div class="col-3 mt-1">
+                    <input type="text" name="occupantFour" class="form-control sm-placeholder" id="occupantFour" placeholder="Name of Occupant">
+                </div>
+            </div>
+            <!-- END OF THIRD FORM ROW -->
+            <label for="applicant-name" class="ml-4">Residence History</label>
+            <div class="form-row ml-3 mb-1">
+                <div class="col-4">
+                    <input type="text" name="presentAddress" class="form-control sm-placeholder" id="presentAddress" placeholder="Present Address" value="123 Somewhere Dr.">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="presentCity" class="form-control sm-placeholder" id="presentCity" placeholder="City" value="Some City">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="presentState" class="form-control sm-placeholder" id="presentState" placeholder="State" value="Some State">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="presentZip" class="form-control sm-placeholder" id="presentZip" placeholder="Zip" value="12345">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="presentYears" class="form-control sm-placeholder" id="presentYears" placeholder="Years of Residence" value="8">
+                </div>
+            </div>
+            <!-- END OF FOURTH FORM ROW -->
+            <div class="form-row ml-3 mb-3">
+                <div class="col-4">
+                    <input type="text" name="presentLandlord" class="form-control sm-placeholder" id="presentLandlord" placeholder="Name & Address of Landlord / Owner" value="Jim Smith">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="presentLandlordCity" class="form-control sm-placeholder" id="presentLandlordCity" placeholder="City" value="Some City">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="presentLandlordState" class="form-control sm-placeholder" id="presentLandlordState" placeholder="State" value="Some State">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="presentLandlordZip" class="form-control sm-placeholder" id="presentLandlordZip" placeholder="Zip" value="12345">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="presentLandlordPhone" class="form-control sm-placeholder" id="presentLandlordPhone" placeholder="Phone Number" value="555-555-5555">
+                </div>
+            </div>
+            <!-- END OF FIFTH FORM ROW -->
+            <div class="form-row ml-3 mb-1">
+                <div class="col-4">
+                    <input type="text" name="previousAddress" class="form-control sm-placeholder" id="previousAddress" placeholder="Previous Address" value="555 Another Ave.">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="previousAddressCity" class="form-control sm-placeholder" id="previousAddressCity" placeholder="City" value="Some City">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="previousAddressState" class="form-control sm-placeholder" id="previousAddressState" placeholder="State" value="Some State">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="previousAddressZip" class="form-control sm-placeholder" id="previousAddressZip" placeholder="Zip" value="12345">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="previousAddressYears" class="form-control sm-placeholder" id="previousAddressYears" placeholder="Years of Residence" value="3">
+                </div>
+            </div>
+            <!-- END OF SIXTH FORM ROW -->
+            <div class="form-row ml-3 mb-3">
+                <div class="col-4">
+                    <input type="text" name="previousLandlord" class="form-control sm-placeholder" id="previousLandlord" placeholder="Name & Address of Landlord / Owner" value="Jane Smith">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="previousLandlordCity" class="form-control sm-placeholder" id="previousLandlordCity" placeholder="City" value="Some City">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="previousLandlordState" class="form-control sm-placeholder" id="previousLandlordState" placeholder="State" value="Some State">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="previousLandlordZip" class="form-control sm-placeholder" id="previousLandlordZip" placeholder="Zip" value="12345">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="previousLandlordPhone" class="form-control sm-placeholder" id="previousLandlordPhone" placeholder="Phone Number" value="555-555-5555">
+                </div>
+            </div>
+            <!-- END OF SEVENTH FORM ROW -->
+            <label for="applicant-name" class="ml-4">Employment History</label>
+            <div class="form-row ml-3 mb-1">
+                <div class="col-3">
+                    <input type="text" name="presentEmployer" class="form-control sm-placeholder" id="presentEmployer" placeholder="Present Employer" value="Joe's Diner">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="presentSupervisor" class="form-control sm-placeholder" id="presentSupervisor" placeholder="Supervisor's Name" value="Joe">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="presentPosition" class="form-control sm-placeholder" id="presentPosition" placeholder="Position" value="Cook">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="presentSalary" class="form-control sm-placeholder" id="presentSalary" placeholder="Salary" value="$12/hr">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="presentEmploymentYears" class="form-control sm-placeholder" id="presentEmploymentYears" placeholder="Years of Employment" value="2">
+                </div>
+            </div>
+            <!-- END OF EIGTH FORM ROW -->
+            <div class="form-row ml-3 mb-3">
+                <div class="col-3">
+                    <input type="text" name="previousEmployer" class="form-control sm-placeholder" id="previousEmployer" placeholder="Previous Employer" value="Jane's Diner">
+                </div>
+                <div class="col-3">
+                    <input type="text" name="previousSupervisor" class="form-control sm-placeholder" id="previousSupervisor" placeholder="Supervisor's Name" value="Jane">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="previousPosition" class="form-control sm-placeholder" id="previousPosition" placeholder="Position" value="Cook">
+                </div>
+                <div class="col-1">
+                    <input type="text" name="previousSalary" class="form-control sm-placeholder" id="previousSalary" placeholder="Salary" value="$12/hr">
+                </div>
+                <div class="col-2">
+                    <input type="text" name="previousEmploymentYears" class="form-control sm-placeholder" id="previousEmploymentYears" placeholder="Years of Employment" value="2">
+                </div>
+            </div>
+            <div class="text-center">
+            <button type="submit" class="text-center btn btn-success btn-lg w-25">Apply</button>
+            </div>
+    </form>
+    <div class="row">
+        <div class="col d-flex justify-content-end mr-4">
+            <a href="/apply/{{id}}"><img src="../assets/arrow.jpeg"></a>
+        </div>
+    </div>
+</div>

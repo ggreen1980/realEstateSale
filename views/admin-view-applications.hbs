@@ -1,0 +1,73 @@
+<div class="d-block w-100 pic mb-5">
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+
+{{#each applicants}}
+<h5 class="text-center features mb-5">Applicant Information</h5>
+<div class="row">
+   <div class="col mb-2">
+        <p class="text-center ml-3"><span class="font-weight-bold">Applicant Name:</span> {{this.firstName}} {{this.lastName}}</p>
+        <p class="text-center ml-3"><span class="font-weight-bold">applied for:</span> {{this.propertyAppliedFor}}</p>
+        <p class="text-center ml-3"><span class="font-weight-bold">Date of birth:</span> {{this.dob}}</p>
+        <p class="text-center ml-3"><span class="font-weight-bold">SSN:</span> {{this.ssn}}</p>
+        <p class="text-center ml-3"><span class="font-weight-bold">Driver's license:</span> {{this.driversLicense}}</p>
+   </div>
+</div>
+<div class="row">
+    <div class="col-3">
+        <p class="text-left ml-3"><span class="font-weight-bold">Marital status:</span> {{this.maritalStatus}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Spouse's name:</span> {{this.spouseName}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Spouse's DOB:</span> {{this.spouseDOB}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Spouse's SSN:</span> {{this.spouseSSN}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Spouse's driver's license:</span> {{this.spouseDrivers}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Desired Move in date:</span> {{this.desiredMoveIn}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Number of occupants:</span> {{this.occupantNumber}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Occupant 1:</span> {{this.occupantOne}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Occupant 2:</span> {{this.occupantTwo}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Occupant 3:</span> {{this.occupantThree}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Occupant 4:</span> {{this.occupantFour}}</p>
+    </div>
+    <div class="col-3">
+        <p class="text-left ml-3"><span class="font-weight-bold">Present Address:</span> {{this.presentAddress}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present City:</span> {{this.presentCity}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present State:</span> {{this.presentState}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present Zip:</span> {{this.presentZip}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Years in Present Home:</span> {{this.presentYears}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present landlord:</span> {{this.presentLandlord}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">City:</span> {{this.presentLandlordCity}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">state:</span> {{this.presentLandlordState}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">zip:</span> {{this.presentLandlordZip}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">phone:</span> {{this.presentLandlordPhone}}</p>
+    </div>
+    <div class="col-3">   
+        <p class="text-left ml-3"><span class="font-weight-bold">Previous Address:</span> {{this.previousAddress}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Previous City:</span> {{this.previousAddressCity}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Previous State:</span> {{this.previousAddressState}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Previous Zip:</span> {{this.previousAddressZip}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Years in Previous Home:</span> {{this.previousAddressYears}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Previous landlord:</span> {{this.previousLandlord}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">City:</span> {{this.previousLandlordCity}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">state:</span> {{this.previousLandlordState}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">zip:</span> {{this.previousLandlordZip}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">phone:</span> {{this.previousLandlordPhone}}</p>
+    </div>
+    <div class="col-3">   
+        <p class="text-left ml-3"><span class="font-weight-bold">Present Employer:</span> {{this.presentEmployer}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present Supervisor:</span> {{this.presentSupervisor}}</p>
+        <p class="text-left ml-3"><span class="font-weight-bold">Present Salary:</span> {{this.presentSalary}}</p>
+        <p class="text-left ml-3 mb-5"><span class="font-weight-bold">Years employed:</span> {{this.presentEmploymentYears}}</p> 
+        <div class="text-center mr-5">
+            <a href="/admin-delete-application/propertyId/{{this.propertyAppliedFor}}/applicant/{{this.id}}"><button class="text-center btn btn-danger m-1">Delete Application</button></a>
+        </div>
+    </div>  
+</div> 
+{{/each}}
+
+{{#unless applicants}}
+<div class="row">
+    <div class="col">
+        <h4 class="text-center mb-1">There are currently no applications in the database</h4>
+    </div>
+</div> 
+{{/unless}}
+    {{!-- href="/diners/{{../id}}/sodas/{{this.id}}/delete --}}

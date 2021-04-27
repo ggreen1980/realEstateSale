@@ -1,0 +1,30 @@
+<div class="d-block w-100 pic mb-5">
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+
+
+<h3 class="text-center mt-3 mb-5 features">Update This Property</h3>
+
+
+<form action='/admin-update-property/propertyId/{{this.id}}' method="POST">
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col-md-6 mx-auto">
+                <div class="text-center">
+                    <input class="mb-1" type="text" name="location" id="location" placeholder="Location of property" value="{{this.location}}" required><br>
+                    <input class="mb-1" type="text" name="imagePath" id="imagePath" placeholder="Image path (/assets/[filename.ext])" title="Image path (/assets/[filename.ext])" value="{{this.imagePath}}" required><br>
+                    <input class="mb-1" type="text" name="thumbnailImagePath" id="thumbnailImagePath" placeholder="Thumbnail image path (/assets/[filename]-small.[ext])" title="Thumbnail image path (/assets/[filename]-small.[ext])" value="{{this.thumbnailImagePath}}" required>{<br>
+                    <input class="mb-1" type="text" name="photoArrayOne" id="insideImagePath1" placeholder="Inside image path 1 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="{{this.insideOne}}" required><br>
+                    <input class="mb-1" type="text" name="photoArrayTwo" id="insideImagePath2" placeholder="Inside image path 2 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="{{this.insideTwo}}" required><br>
+                    <input class="mb-1" type="text" name="photoArrayThree" id="insideImagePath3" placeholder="Inside image path 3 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="{{this.insideThree}}" required><br>
+                    <input class="mb-1" type="text" name="bedrooms" id="rooms" placeholder="Number of Rooms" value="{{this.bedrooms}}" required><br>
+                     <input class="mb-1" type="text" name="baths" id="baths" placeholder="Number of Baths" value="{{this.baths}}" required><br>
+                    <input class="mb-1" type="text" name="tag" id="tag" placeholder="Tag Line" value="{{this.tag}}" required><br>
+                    <input class="mb-1" type="text" name="rentAmt" id="rentAmt" placeholder="Rent Amount" value="{{this.rentAmt}}" required><br>
+                    <input class="mb-3" type="text" name="featured" id="featured" placeholder="Featured (true/false)" value="{{this.featured}}"><br>
+                    <button class="btn btn-success btn-md" type="submit">Update Property</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

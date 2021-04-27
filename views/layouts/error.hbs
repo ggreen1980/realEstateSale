@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Error</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    {{!-- <link rel="stylesheet" href="/stylesheets/bootstrap.min.css"> --}}
+     <link rel="stylesheet" href="/stylesheets/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" media="screen" href="/stylesheets/main.css">
+</head>
+
+
+<body>
+<div class="container-fluid p-0">
+    <header class="header">
+        <nav class="navbar navbar-default" role="navigation">
+            <div id="hover" class="navbar-header">
+                <a class="navbar-brand" href="/">
+                    <h1>
+                        <div>
+                            <span class="a-logo display-2 logo" id="a">A</span>
+                        </div>
+                        <div class="row">
+                            <span id="and" class="display-4">&amp;</span>
+                        </div>
+                        <div class="row">
+                            <span class="g-logo display-2 logo">G <span id="properties-logo" class="display-4">Properties</span></span>
+                        </div>
+                    </h1>
+                </a>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul class="nav justify-content-end px-5 header-ul">
+                        <li class="nav-item px-2">
+                            <a class="nav-link" href="/">Home</a>
+                        </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="/mission">Mission</a>
+                        </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="/contact">Contact</a>
+                        </li>
+                            <li class="nav-item px-2">
+                            <a class="nav-link" href="/about">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+            {{{ body }}}
+    </main>
+
+    <footer class="m-5 footer-break mx-auto">
+        <ul class="nav justify-content-center">
+            <li class="nav-item">
+                <a class="nav-link" href="/careers">Careers</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/associates">Associates</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/services">Services</a>
+            </li>
+        </ul>
+    </footer>
+
+    <div class="text-center small">copyright &copy; 2020 A &amp; G Properties<br>  All rights reserved.</div>        
+</div>
+    <script src="/javascripts/error.js"></script>
+</body>
+</html>

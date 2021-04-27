@@ -1,0 +1,34 @@
+<div class="d-block w-100 pic mb-5">
+    <img class="d-block w-100 pic" src="{{imagePath}}" alt="First slide">
+</div>
+
+
+<!-- ADD A NEW PROPERTY TO THE DATABASE -->
+
+
+<!-- TLM: CLICK ON THIS <a> TAG TO AUTO POPULATE FORM -->
+<a href="/populate-add-form"><h3 class="text-center mt-3 mb-5 features autoPopulate" title="click here to auto populate form">Add a New Property</h3></a>
+
+
+<form action='/add-new-property' method="POST">
+    <div class="container">
+        <div class="row mx-auto">
+            <div class="col-md-6 mx-auto">
+                <div class="text-center">
+                    <input class="mb-1" type="text" name="location" id="location" placeholder="Location of property" value="123 Add Ave." required autofocus><br>
+                    <input class="mb-1" type="text" name="imagePath" id="imagePath" placeholder="Image path (/assets/[filename.ext])" title="Image path (/assets/[filename.ext])" value="/assets/add-house.jpeg" required><br>
+                    <input class="mb-1" type="text" name="thumbnailImagePath" id="thumbnailImagePath" placeholder="Thumbnail image path (/assets/[filename]-small.[ext])" title="Thumbnail image path (/assets/[filename]-small.[ext])" value="/assets/add-house-small.jpeg" required><br>
+                    <input class="mb-1" type="text" name="photoArray" id="insideImagePath1" placeholder="Inside image path 1 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="/assets/insidePhotoCarousel/add-bedroom.jpeg" required><br>
+                    <input class="mb-1" type="text" name="photoArray" id="insideImagePath2" placeholder="Inside image path 2 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="/assets/insidePhotoCarousel/add-kitchen.jpeg" required><br>
+                    <input class="mb-1" type="text" name="photoArray" id="insideImagePath3" placeholder="Inside image path 3 (/assets/insidePhotoCarousel/[filename]-small.[ext])" title="Inside image path (/assets/insidePhotoCarousel/[filename]-small.[ext])" value="/assets/insidePhotoCarousel/add-living-room.jpeg" required><br>
+                    <input class="mb-1" type="text" name="bedrooms" id="rooms" placeholder="Number of Rooms" value="3" required><br>
+                     <input class="mb-1" type="text" name="baths" id="baths" placeholder="Number of Baths" value="2" required><br>
+                    <input class="mb-1" type="text" name="tag" id="tag" placeholder="Tag Line" value="A great home" required><br>
+                    <input class="mb-1" type="text" name="rentAmt" id="rentAmt" placeholder="Rent Amount" value="875" required><br>
+                    <input class="mb-3" type="text" name="featured" id="featured" placeholder="Featured (true/false)" value="true"><br>
+                    <button class="btn btn-success btn-md" type="submit">Add Property</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

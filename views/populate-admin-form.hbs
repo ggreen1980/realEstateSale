@@ -1,0 +1,24 @@
+<img class="d-block w-100 pic mb-3" src="{{this.imagePath}}" alt="Second slide">
+
+
+<h2 class="text-center features mb-5">Administrative Login</h2>
+
+
+<form action='/admin/login' method="POST" class="bg bg-light rounded border m-5 p-3 mx-auto w-25">
+    
+    
+    <!-- TLM: CLICK ON THIS <a> TAG TO AUTO POPULATE LOGIN FORM -->
+    <a href="/populate-admin-form"><h6 class="text-center autoPopulate" title="click here to auto populate form">Administrative Login</h6></a>
+    
+        
+        
+        <div class="mb-2 text-center">
+            <input type="text" id="adminName" name="adminName" class="sm-placeholder" id="input-first-name" placeholder="Enter your Admin name" value="Amber" autofocus>
+        </div>
+        <div class="text-center mb-2">
+            <input type="password" name="password" class="sm-placeholder" id="input-middle-intial" placeholder="password" value="Amber">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+        </div>
+</form>

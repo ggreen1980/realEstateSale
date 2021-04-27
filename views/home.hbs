@@ -1,0 +1,165 @@
+<!-- FEATURED PROPERTIES CAROUSEL -->   
+<div id="slideshow-carousel-featured" class="carousel slide carousel-fade mb-5 bottom-green" data-ride="carousel" data-interval="4000">
+    <!-- Indicators -->
+    
+    <ul class="carousel-indicators">
+        <li data-target="#slideshow-carousel-featured" data-slide-to="0" class="active"></li>
+        {{#each properties}}
+        {{#if featured}}
+        <li data-target="#slideshow-carousel-featured" data-slide-to="{{this}}"></li>
+        {{/if}}
+        {{/each}}
+    </ul>
+    <div class="carousel-inner">
+        {{#if featured}}
+        <div class="carousel-item active">
+            <a href="/details/{{this.id}}"><img class="d-block w-100 pic img-fluid" src="{{imagePath}}" alt="First Featured slide"></a>
+            <div class="carousel-caption text-black-15 text-shadow">
+                <h1>{{bedrooms}} bed {{baths}} bath</h1>
+                <h3>{{tag}}</h3>
+                <h3>${{rentAmt}}/month</h3>
+                <a href="/apply/{{this.id}}"><button class="text-center btn btn-md btn-dark">Apply Now</button></a>
+                <a href="/details/{{this.id}}"><button class="text-center btn btn-md btn-dark">Details</button></a>
+            </div>
+        </div>
+        {{/if}}
+
+        {{#each properties}}
+        {{#if featured}}
+        <div class="carousel-item">
+            <a href="/details/{{this.id}}"><img class="d-block w-100 pic img-fluid" src="{{this.imagePath}}" alt="Featured slides"></a>
+            <div class="carousel-caption text-black-15 text-shadow">
+                <h1>{{this.bedrooms}} bed {{this.baths}} bath</h1>
+                <h3>{{this.tag}}</h3>
+                <h3>${{this.rentAmt}}/month</h3>
+                <a href="/apply/{{this.id}}"><button class="text-center btn btn-md btn-dark">Apply Now</button></a>
+                 <a href="/details/{{this.id}}"><button class="text-center btn btn-md btn-dark">Details</button></a>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+     <!-- Left and right controls -->
+            <a class="carousel-control-prev" href="#slideshow-carousel-featured" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#slideshow-carousel-featured" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        {{#unless properties}}
+            <h5 class="text-center">No properties available at this time</h5>
+        {{/unless}}
+</div> 
+<!-- End of Carousel -->
+           
+<div class="text-left d-flex justify-content-center mb-5">
+    <p class="mx-4 lead text-center">A &amp; G Properties has beautiful homes for rent today.<br> Please view our available properties and apply today.</p> 
+</div>
+
+
+
+
+<!-- FEATURED PROPERTIES LISTED -->
+
+<div class="row">
+    <div class="col">
+        <h2 class="text-center features feature-txt">Featured Properties</h2>
+    </div>
+</div>
+<div class="mx-5 bg-light mb-5 rounded">
+    <div class="row flex justify-content-center">
+        <div class="col-sm-6 col-md-2 m-2">
+            {{#if featured}}
+            <a href="/details/{{this.id}}"><img class="d-block thumb mb-1 img-fluid w-100 rounded" src="{{thumbnailImagePath}}" alt="first featured home"></a>
+            <h4 class="text-center font-weight-bold small">{{location}}</h4>
+            <h6 class="text-center font-weight-bold small">{{bedrooms}} bed / {{baths}} bath</h6>
+            <p class="small text-center">{{tag}}</p>
+            <h6 class="text-center">${{rentAmt}}/month</h6>
+            <div class="text-center">
+                <a href="/apply/{{this.id}}"><button class="text-center btn btn-sm btn-dark m-1 w-75">Apply Now</button></a>
+            </div>
+            <div class="text-center">
+                <a href="/details/{{this.id}}"><button class="text-center btn btn-sm btn-dark w-75">Details</button></a>
+            </div>
+        {{/if}}
+        </div>
+
+        {{#each properties}}
+        {{#if featured}}
+        <div class="col-sm-6 col-md-2 m-2 mb-5">
+            <a href="/details/{{this.id}}"><img class="d-block thumb mb-1 img-fluid w-100 rounded" src="{{this.thumbnailImagePath}}" alt="featured home"></a>
+            <h6 class="text-center font-weight-bold small">{{location}}</h6>
+            <h6 class="text-center font-weight-bold small">{{this.bedrooms}} bed / {{this.baths}} bath</h6>
+            <p class="small text-center">{{this.tag}}</p>
+            <h6 class="text-center">${{this.rentAmt}}/month</h6>
+            <div class="text-center">
+                <a href="/apply/{{this.id}}"><button class="text-center btn btn-sm btn-dark m-1 w-75">Apply Now</button></a>
+            </div>
+            <div class="text-center">
+                <a href="/details/{{this.id}}"><button class="text-center btn btn-sm btn-dark w-75">Details</button></a>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+        <div class="row">
+            <div class="col d-flex justify-content-end">
+                <a href="/"><img src="assets/arrow.jpeg"></a>
+            </div>
+        </div>
+</div>
+
+<!-- OTHER AVAILABLE PROPERTIES LISTED -->
+
+<div class="row">
+    <div class="col">
+        <h2 class="text-center features feature-txt">Also Available</h2>
+    </div>
+</div>
+
+<div class="bg-light mx-5 mb-5 rounded">
+    <div class="row flex justify-content-center">
+        {{#each properties}}
+        {{#unless featured}}
+        <div class="col-sm-6 col-md-2 m-2 mb-5">
+            <a href="/details/{{this.id}}"><img class="d-block thumb mb-1 img-fluid w-100 rounded" src="{{this.thumbnailImagePath}}" alt="first featured"></a>
+            <h6 class="text-center font-weight-bold small">{{location}}</h6>
+            <h6 class="text-center font-weight-bold small">{{this.bedrooms}} bed / {{this.baths}} bath</h6>
+            <p class="small text-center">{{this.tag}}</p>
+            <h6 class="text-center">${{this.rentAmt}}/month</h6>
+            <div class="text-center">
+                <a href="/apply/{{this.id}}"><button class="text-center btn btn-sm btn-dark m-1 w-75">Apply Now</button></a>
+            </div>
+            <div class="text-center">
+                <a href="/details/{{this.id}}"><button class="text-center btn btn-sm btn-dark w-75">Details</button></a>
+            </div>
+        </div>
+        {{/unless}}
+        {{/each}}
+    </div>
+    <div class="row">
+        <div class="col d-flex justify-content-end">
+            <a href="/"><img src="assets/arrow.jpeg"></a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

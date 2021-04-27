@@ -1,0 +1,30 @@
+<img class="d-block w-100 pic mb-5" src="{{this.imagePath}}" alt="Second slide">
+           
+<h2 class="text-center features mb-5">Please Contact Us</h2>
+
+<div class="bg bg-light rounded border m-5 p-3">
+    <form action='/contact-form' method="POST">
+        <div class="container">
+            <div class="row mx-auto">
+                <div class="col-md-4 mx-auto">
+                    <div class="text-center">
+                        <input type="text" name="firstName" class="form-control sm-placeholder" id="input-contact-first-name" placeholder="First Name"><br>
+                        <input type="text" name="initial" class="form-control sm-placeholder" id="input-contact- middle-intial" placeholder="Middle Initial"><br>
+                        <input type="text" name="lastName" class="form-control sm-placeholder" id="input-contact-last-name" placeholder="Last Name"><br>
+                        <input type="email" name="email" class="form-control sm-placeholder" id="input-contact-email" placeholder="email"><br>
+                        <input type="text" name="phone" class="form-control sm-placeholder" id="input-contact-phone" placeholder="phone"><br>
+                        <textarea type="text" rows="5" cols="40" class="mb-3 sm-placeholder" name="comments" id="input-comments" placeholder="Comments"></textarea>
+                        <div>
+                            <button type="submit" class="text-center btn btn-success btn-sm w-25">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="row">
+        <div class="col d-flex justify-content-end">
+            <a href="/contact"><img src="assets/arrow.jpeg"></a>
+        </div>
+    </div>
+</div>
